@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './context/AuthContext'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import CompanyViewer from './pages/CompanyViewer'
+import Admin from './pages/Admin'
 import SplashScreen from './components/SplashScreen'
 
 function Protected({ children }: { children: React.ReactNode }) {
@@ -50,6 +51,14 @@ export default function App() {
           element={
             <Protected>
               <CompanyViewer />
+            </Protected>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <Protected>
+              <Admin />
             </Protected>
           }
         />

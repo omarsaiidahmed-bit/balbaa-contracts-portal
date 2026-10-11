@@ -87,6 +87,14 @@ export default function Dashboard() {
                 <div className="text-[10px] text-slate-500 tracking-[0.2em] hidden md:block">
                   CONTRACTS KNOWLEDGE PORTAL
                 </div>
+                {profile?.role === 'admin' && (
+                  <Link
+                    to="/admin"
+                    className="text-[10px] text-purple-600 font-bold tracking-widest hover:text-purple-800 transition"
+                  >
+                    ● ADMIN PANEL
+                  </Link>
+                )}
               </div>
             </div>
 
